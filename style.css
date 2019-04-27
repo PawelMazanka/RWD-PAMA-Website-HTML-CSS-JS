@@ -1,0 +1,213 @@
+body {
+    margin: 0;
+    padding: 0;
+    color:#737373;
+    text-align: center;
+    font-family: 'Marck Script', cursive;
+}
+p{
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+.pageHeader{
+    position: absolute;
+    width:100%;
+    margin:0;
+    min-height: 30px;
+    background:#d6d6d6;
+    box-shadow: 0px 6px 10px 1px rgba(115,115,115,1);
+}
+
+.pageHeader .logo{
+    max-width: 20%;
+    max-height: 100%;
+    position: absolute;
+    left: 30px;
+}
+
+.pageHeader .menuButton{
+    position: absolute;
+    top: 0;
+    right: 10px;
+    border: 0;
+    background: 0;
+}
+
+.pageHeader .menuButton .closeMenu{
+    display: none;
+}
+
+.pageNav .navigationMenu{
+    background: url('backgrounds/nav.jpg');
+    background-size: cover;
+    list-style: none;
+    font-size: 30px;
+    display: none;
+}
+
+.pageNav.openedNav .navigationMenu{
+    display: block;
+    box-shadow: 0px 6px 10px 1px rgba(115,115,115,1);
+    margin:0;
+    padding:0;
+}
+
+.pageNav.openedNav .menuButton .closeMenu{
+    display: inline-block;
+}
+.pageNav.openedNav .menuButton .openMenu{
+    display: none;
+}
+
+.pageNav .navigationMenu li{
+    padding: 20px;
+}
+.pageNav .navigationMenu li:first-child{
+    padding-top: 45px;
+}
+
+.pageNav a{
+    text-decoration: none;
+    color:#737373;
+}
+
+.homePage {
+    width: 100%;
+    background: url('backgrounds/home.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 100%;
+    padding-top: 30px; 
+    padding-bottom: 50px;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 0px 6px 10px 1px rgba(115,115,115,1);
+}
+
+.about,.contact p{
+    font-size: 25px; 
+}
+
+.about, .contact{
+    background: url('backgrounds/minimal.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    z-index: -1;
+    padding: 30px 0;
+    box-shadow: 0px 6px 10px 1px rgba(115,115,115,1); 
+}
+.about .headerAbout, .headerContact, .headerGallery{
+    margin-top: 0px;
+    font-size: 35px;
+}
+
+.gallery{
+    background: url('backgrounds/wood.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    padding: 30px 0;
+    z-index: -2;
+    box-shadow: 0px 6px 10px 1px rgba(115,115,115,1); 
+}
+.contact{
+    z-index: -3;
+}
+.gallery img{
+    margin: 30px;
+    display: block;
+    box-shadow: 0px 0px 25px 0px rgba(115,115,115,1); 
+    width: calc(100% - 60px);
+}
+
+a:hover{
+    cursor: pointer;
+}
+
+.footer{
+    background: url('backgrounds/nav.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    z-index: -4;
+}
+
+.footer p{
+    margin: 0;
+    padding: 10px;
+}
+
+.footer p:first-child{
+    padding-top: 20px;
+}
+
+.footer a{
+    text-decoration: none;
+    color: #737373;
+}
+
+@media (min-width: 850px){
+.pageHeader{
+    margin: auto;
+    left: 0;
+    right: 0;
+    min-height: 50px;
+}
+.pageNav .menuButton{
+     display: none;
+}
+.pageNav .navigationMenu{
+    display: block;
+    margin: 0;
+    background: none;
+    position: absolute;
+    right: 50px;
+}
+ .pageNav .navigationMenu{
+  display: flex;
+  align-items: center;
+  flex-direction: row; 
+  margin-right: 20px;
+  height: 100%; 
+}
+.pageNav .navigationMenu li{
+    padding: 0;
+    margin-right: 50px; 
+}
+.pageNav .navigationMenu li:after {
+    content: '';
+    display: block;
+    margin: auto;
+    height: 3px;
+    width: 0px; 
+    transition: all ease-in-out .5s ;
+  }
+.pageNav .navigationMenu li:hover:after {
+    width: 100%;
+    background: #737373;
+  }
+.pageNav .navigationMenu li:first-child {
+    padding-top: 0;
+}
+.pageNav .navigationMenu li:last-child{
+    margin-right: 0;
+}
+
+.pageHeader .logo{
+    max-width: 150px;
+    left: 50px;
+    top: 0;
+}
+.homePage{
+    padding-top: 25vh;
+    min-height: 65vh;
+}
+.homePage p{
+    padding: 20px;
+}
+p{
+    margin: 0;
+}
+}
